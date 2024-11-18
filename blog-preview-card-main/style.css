@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-size: 16px;
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  background-color: var(--white);
+  margin: 1rem;
+  width: 384px;
+  height: 522px;
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 20px;
+
+  border: 1px solid #000;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  width: 384px;
+  height: 522px;
+  bottom: -9px;
+  right: -9px;
+  border-radius: 20px;
+
+  background-color: #000;
+  z-index: -1;
+}
+
+main * {
+  cursor: default;
+}
+
+.hero {
+  width: 336px;
+  height: 202px;
+  border-radius: 12px;
+  position: relative;
+  top: -1px;
+}
+
+.status {
+  position: relative;
+  top: 4px;
+  width: 82px;
+  height: 29px;
+  background-color: var(--yellow);
+  font-weight: 800;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  letter-spacing: 0.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.published {
+  color: var(--gray-950);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  position: relative;
+  top: -1px;
+  letter-spacing: -0.2px;
+}
+
+h1 {
+  color: var(--gray-950);
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  position: relative;
+  top: -3px;
+  left: 0.1px;
+  letter-spacing: 0.01px;
+}
+
+h1:hover {
+  color: var(--yellow);
+}
+
+p {
+  color: var(--gray-500);
+  font-weight: 500;
+  line-height: 1.5rem;
+
+  position: relative;
+  top: -5px;
+  letter-spacing: 0.01px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author img {
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.author .name {
+  color: var(--gray-950);
+  font-weight: 800;
+
+  position: relative;
+  left: 4px;
+  letter-spacing: -1.2px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+}
